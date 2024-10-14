@@ -38,7 +38,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Invalid operation. Please enter +, -, *, or /.");
+            Console.WriteLine("Invalid operation. Please enter +, -, *, /");
         }
     }
 }
