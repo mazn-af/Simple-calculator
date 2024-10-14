@@ -1,28 +1,44 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-public class m
+
+class Program
 {
-   static void Main(string[]args)
-   {
+   public static void Main()
+    {
+        Console.WriteLine("Enter the first number:");
+        double num1 = Convert.ToDouble(Console.ReadLine());
 
-string str1;// First Number
-string str2;// 2st Number
+        Console.WriteLine("Enter the second number:");
+        double num2 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Enter first num:");
-    str1 = Console.ReadLine();
-Console.WriteLine("Enter sec num:");
-    str2= Console.ReadLine();
-Console.WriteLine("Enter The operation:");
-   
-    
-    int num1=int.Parse(str1); //string to int
-    int num2=int.Parse(str2); //string to int
-Console.WriteLine($"{num1}+{num2}="+(num1+num2));// result: num1+num2=??
-Console.WriteLine($"{num1}-{num2}="+(num1-num2));// result: num1-num2=??    
-Console.WriteLine($"{num1}/{num2}="+(num1/num2));// result: num1/num2=??    
-Console.WriteLine($"{num1}*{num2}="+(num1*num2));// result: num1*num2=??    
+        Console.Write("Enter the operation (+, -, *, /):");
+        string operation = Console.ReadLine();
 
+        double result = 0;
 
-    
-   }
+        if (operation == "+")
+        {
+            result = num1 + num2;
+            Console.WriteLine($"\nResult: {num1} + {num2} = {result}");
+        }
+        else if (operation == "-")
+        {
+            result = num1 - num2;
+            Console.WriteLine($"\nResult: {num1} - {num2} = {result}");
+        }
+        else if (operation == "*")
+        {
+            result = num1 * num2;
+            Console.WriteLine($"\nResult: {num1} * {num2} = {result}");
+        }
+        else if (operation == "/")
+        {
+            
+                result = num1 / num2;
+                Console.WriteLine($"\nResult: {num1} / {num2} = {result}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid operation. Please enter +, -, *, or /.");
+        }
+    }
 }
